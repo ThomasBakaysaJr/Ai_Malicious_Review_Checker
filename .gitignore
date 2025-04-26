@@ -4,3 +4,5 @@ reviews/*
 **/.ipynb_checkpoints
 files/*
 !files/.gitkeep
+modesl/*
+!models/.gitkeep
