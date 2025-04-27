@@ -15,3 +15,23 @@ to train an initial model, which i will call the support model.
 accurate the predictions are.
 5. When I'm happen the performance of the support model, I will use it to create psuedo labels for the entirety of the yelp dataset.
 6. Train a new model on the yelp dataset, integrating the various features that I had cleaned earlier.
+
+
+## Support Models (bootstrap model)
+Model expects this as the structure of the hstack
+X = hstack([x_text, rate_feature])
+where x_text is cleaned text (no punctuation, lower case) that that has been vectorized.
+where rate_feature is the ratings / 5.0 and shaped into a 2d arrary
+
+	text
+83	man this place is nice the bartender was awesome try the burger its fresh with all local ingredients the plates of food i saw come out looked amazing as well 
+
+the beer is cold the drinks are mixed perfectly  this is not a chain restaurant but a dedicated local place with good employees
+	text
+176	we have had a blast to each event weve been to  weve been to concerts and basketball games and other were a lot of fun  the food is really good also  a lot of local favorites are offered
+	text
+214	steve  his partner are the best love that hell do a bunch of demo racquets great prices with lots to choose from if youre a player this is the place to go
+	text
+304	its my first time here and the service is slow the employees dont have good attitude but the food its good
+	text
+452	i am a huge fan of gennaros its got a thin crust sweet and rich tomato sauce along w fresh mozzarella cheese also the meatballs are excellent cant say enough about how much i love it here also the decor is vintage and adorable i have yet to be disappointed with gennaros

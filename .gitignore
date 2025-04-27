@@ -1,8 +1,9 @@
 reviews/*
 !reviews/fakeReviews/.gitkeep
 !reviews/yelpReviews/.gitkeep
+!reviews/YelpZip/.gitkeep
 **/.ipynb_checkpoints
 files/*
 !files/.gitkeep
-modesl/*
+models/*
 !models/.gitkeep
