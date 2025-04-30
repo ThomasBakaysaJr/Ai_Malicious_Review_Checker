@@ -4,6 +4,7 @@ reviews/*
 !reviews/YelpZip/.gitkeep
 **/.ipynb_checkpoints
 files/*
-!files/.gitkeep
+!files/review_chunks/no_label/no_group/.gitkeep
+!files/review_chunks/no_label/rating_group/.gitkeep
 models/*
 !models/.gitkeep
