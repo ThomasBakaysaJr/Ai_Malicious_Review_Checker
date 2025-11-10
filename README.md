@@ -1,29 +1,28 @@
+
 # Ai_Malicious_Review_Checker
 Thomas T Bakaysa, Jr
 
----
-## Project Summary
-Final project for Ai enhanced security. Goal is to create a model that can determine whether a review is spam / fake by 
-utilizing a bootstrap model to pseudo-label a review dataset, validate those and then attempt to create a more
-powerful model that could reliably lable reviews as spam / fake based on a vareity of attributes.
----
+## Project Summary  
+
+Final project for Ai enhanced security. Goal is to create a model that can determine whether a review is spam / fake by utilizing a bootstrap model to pseudo-label a review dataset, validate those and then attempt to create a more powerful model that could reliably lable reviews as spam / fake based on a vareity of attributes.
+
 ### Initial Goal
-The bootstrap model would use a less detailed dataset. Unfortunately the dataset used for the bootstrap model were reviews 
-from a wide variety of sources, with fake reviews being computer generated. This lead to a bootstrap model that was 
-trained on different data than Yelp reviews would normally contain, as Yelp is for business while the Fake dataset was
+
+The bootstrap model would use a less detailed dataset. Unfortunately the dataset used for the bootstrap model were reviews from a wide variety of sources, with fake reviews being computer generated. This lead to a bootstrap model that was trained on different data than Yelp reviews would normally contain, as Yelp is for business while the Fake dataset was
 from a variety of online retail spaces.
----
+
 ### Project Pivot
-In the end, I pivoted to trying to predict what star rating a customer would give based on their personal information,
-previous review data, the current review message that they are posting. Ending with a LightGBM model that had about 65%
-accuracy. Due to time and class constraints, this was the first and only functional model made from the Yelp Dataset.
----
+
+In the end, I pivoted to trying to predict what star rating a customer would give based on their personal information, previous review data, the current review message that they are posting. Ending with a LightGBM model that had about 65% accuracy. Due to time and class constraints, this was the first and only functional model made from the Yelp Dataset.
+
 ## Datasets used
+
 [Yelp dataset](https://www.kaggle.com/datasets/yelp-dataset/yelp-dataset/data): Used to train final model.  
 [Fake Reviews](https://www.kaggle.com/datasets/mexwell/fake-reviews-dataset/data): Used for initial, unsuccessful, bootstrap model.
+
 ---
-# Overview of the Project
-## Pre-process the yelp dataset, discarding irrelevant categories.
+## Overview of the Project
+### Pre-process the yelp dataset, discarding irrelevant categories.
 1. Clean and chunk user and business data
 - Remove extraneous data columns from the user data, then create data chunks of 100,000 lines each
 - Expand and insert business categories into broader, more encompassing categories.
